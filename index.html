@@ -416,7 +416,7 @@
                 <!--</a>-->
             <!--</div>-->
         <!--</div>-->
-        <div class="second_block first">
+        <div class="second_block first block1">
             <div class="slider__container">
                 <div class="slider__items">
                     <div class="slider__item item1">
@@ -481,7 +481,7 @@
             </div>
         </div>
 
-        <div class="second_block">
+        <div class="second_block block2">
             <div class="slider__container">
                 <div class="slider__items">
                     <div class="slider__item item2">
@@ -545,7 +545,7 @@
             </div>
         </div>
 
-        <div class="second_block">
+        <div class="second_block  block3">
             <div class="slider__container">
                 <div class="slider__items">
                     <div class="slider__item item3">
@@ -601,7 +601,7 @@
                 <!--	<span class="slider__indicator" onclick="currentSlide(3)">03</span> -->
             </div>
         </div>
-        <div class="second_block">
+        <div class="second_block block4">
             <div class="slider__container">
                 <div class="slider__items">
                     <div class="slider__item item4">
@@ -834,7 +834,7 @@
 
     var selector = '.item' + (evt.currentTarget.id);
     slides = $('.slider_directions:visible ' + selector);
-    dots = dots = $('.slider_directions:visible ' + selector + ' .slider__indicator');
+    dots = dots = $('.slider_directions:visible .slider__indicator');
     slideIndex = 1;
     console.log(slides);
     // slides[0].style.display = 'flex';
@@ -892,9 +892,8 @@
   function getTabInfo(tabIndex) {
     var tabInfo = tabSlides[tabIndex];
     if (tabInfo == null) {
-      var selector = '.item' + (tabIndex + 1);
-      var slides = $('.slider_directions:visible ' + selector);
-      var dots = $('.slider_directions:visible ' + selector + ' .slider__indicator');
+      var slides = $('.slider_directions:visible .item' + (tabIndex + 1));
+      var dots = $('.slider_directions:visible .block' + (tabIndex + 1) + ' .slider__indicator');
       tabInfo = {
         // selectedIndex: 0,
         slides: slides || [],
