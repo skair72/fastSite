@@ -2242,6 +2242,7 @@ footer {
     bottom: unset;
   }
   .slider__indicators {
+    right: 0;
     bottom: 56px;
   }
   .second_block {
