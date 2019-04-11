@@ -2123,6 +2123,17 @@ footer {
     margin-right: 0;
   }
 
+  .parallax-scroll-one{
+    margin-left: 0;
+    margin-right: 0;
+    background-image: url("../img/2ph_mobile.png");
+    background-size: cover;
+  }
+
+  .parallax-scroll-two {
+    display: none;
+  }
+
   .page_three__technology-case {
     padding-left: 0;
     padding-right: 0;
