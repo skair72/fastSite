@@ -2117,6 +2117,7 @@ footer {
   .page_one {
     padding-left: 20px;
     padding-right: 20px;
+    height: 128px;
   }
 
   .page_three {
