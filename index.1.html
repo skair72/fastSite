@@ -85,8 +85,8 @@
 	<div class="parallax-scroll-one"></div>
 	<!-- SECONDBLOCK -->
 	<div class="block_name">
-		<p class="">НАПРАВ-</p>
-		<p class="">ЛЕНИЯ</p>
+		<p>НАПРАВ-</p>
+		<p>ЛЕНИЯ</p>
 	</div>
 	<div id="page_two" class="page_two">
 		<div class="slider_directions">
@@ -492,9 +492,9 @@
 			</div>
 		<!-- </div> -->
 	</div>
-	
+
 	<footer></footer>
-	
+
 	<script src="js/jquery.min.js"></script>
 	<script src="js/parallax.min.js"></script>
 	<script type="text/javascript">
@@ -505,7 +505,7 @@
 		showSlides(slideIndex);
 
 		function tabsOpen(evt, idTabs) {
-			
+
 			slides = document.getElementsByClassName("item" + evt.currentTarget.id);
 			slideIndex = 1;
 			console.log(slides);
@@ -513,7 +513,7 @@
 			showSlides(slideIndex);
 
 			var i, tabcontent, tablinks;
-			
+
 			tabcontent = document.getElementsByClassName("second_block");
 			tablinks = document.getElementsByClassName("tablinks");
 
@@ -524,7 +524,7 @@
 			for (i = 0; i < tablinks.length; i++) {
 				tablinks[i].className = tablinks[i].className.replace(" active", "");
 			}
-			
+
 			document.getElementById(idTabs).style.display = "block";
 			evt.currentTarget.className += " active";
 		}
@@ -543,7 +543,7 @@
 
 		function showSlides(n) {
 			var i;
-			
+
 			var dots = document.getElementsByClassName("slider__indicator");
 			if (n > slides.length) {
 				slideIndex = 1
@@ -591,7 +591,7 @@
 				}
 			})
 		});
-		
+
 	</script>
 </body>
 
