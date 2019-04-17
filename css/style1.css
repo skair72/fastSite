@@ -2381,6 +2381,10 @@ footer {
     margin-bottom: 1vw;
 }
 
+.scroll_text {
+    display: none;
+}
+
 @media screen and (min-width: 100px) and (max-width: 860px) {
     .fourth_block__container {
         flex-direction: column-reverse !important;
@@ -2548,8 +2552,19 @@ footer {
         display: none;
     }
 
+    .scroll_text {
+        display: inherit;
+        color: white;
+        margin: 90vh calc(50% - 40px);
+        transform: rotate(-90deg);
+    }
+
+    .scroll_text p {
+        font-size: 10pt;
+    }
+
     .page_one {
-        background-image: url("../img/main-mobile-logo-v2.png");
+        background-image: url("../img/main-mobile-logo-v3.png");
     }
 
     .second_block_upph {
