@@ -184,7 +184,7 @@ header {
     background-image: url("../img/3ph.png");
     min-height: 234px;
     background-attachment: fixed;
-    background-position: -6px;
+    background-position: calc(50% - 12px) calc(50% + 40px);
 }
 
 footer {
@@ -2361,6 +2361,24 @@ footer {
     .page_four {
         margin: 0;
     }
+}
+
+.navigation_directions__items {
+    height: 13vw;
+}
+
+.parallax-scroll-two {
+    min-height: 13vw;
+    /*display: none;*/
+}
+
+.navigation_directions h2 {
+    font-size: 1.7vw;
+}
+
+.navigation_directions p {
+    font-size: 1vw;
+    margin-bottom: 1vw;
 }
 
 @media screen and (min-width: 100px) and (max-width: 860px) {
