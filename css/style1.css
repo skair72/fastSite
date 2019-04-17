@@ -2559,8 +2559,9 @@ footer {
         transform: rotate(-90deg);
     }
 
-    .scroll_text p {
+    .scroll_text a {
         font-size: 10pt;
+        color: white;
     }
 
     .page_one {
@@ -2609,7 +2610,7 @@ footer {
         /*display: none;*/
     }
 
-    #first_block_name {
+    .first_block_name {
         display: none;
     }
 
