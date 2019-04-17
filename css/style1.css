@@ -2386,6 +2386,10 @@ footer {
         flex-direction: column-reverse !important;
     }
 
+    .page_one {
+        background-attachment: unset;
+    }
+
     .page_four {
         margin: 0;
     }
@@ -2545,7 +2549,7 @@ footer {
     }
 
     .page_one {
-        background-image: url("../img/mainPage.png");
+        background-image: url("../img/main-mobile-logo-v2.png");
     }
 
     .second_block_upph {
