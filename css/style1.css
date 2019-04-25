@@ -56,6 +56,35 @@ header {
     z-index: 50;
 }
 
+.logo_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.company_logo_text {
+    display: block;
+    font-family: Geometria Medium, serif;
+    font-weight: 700;
+    align-self: flex-start;
+}
+
+.company_logo {
+    max-width: 100%;
+    max-height: 100%;
+    margin-bottom: 15%;
+}
+
+.content_box {
+    flex: 1;
+    max-height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .fade {
     -webkit-transition: opacity 0.4s ease-in-out;
     -o-transition: opacity 0.4s ease-in-out;
@@ -216,14 +245,12 @@ footer {
     align-items: center;
     margin-left: 54px;
     margin-right: 54px;
-    padding-left: 109px;
-    padding-right: 109px;
 }
 
 .page_three__technology-case {
     width: 33.333%;
     min-width: 300px;
-    padding: 0 33px 70px 33px;
+    padding: 0 2vw 70px 2vw;
 }
 
 .technology-case__name {
@@ -311,10 +338,7 @@ footer {
 }
 
 .page_four {
-    margin-left: 54px;
-    margin-right: 54px;
-    margin-top: 80px;
-    height: 500px;
+    margin: auto;
 }
 
 .first_block img {
@@ -401,9 +425,9 @@ footer {
 
 .slider__indicator {
     font-family: Geometria Medium;
-    margin-right: 20px;
+    margin-right: 1vw;
     cursor: pointer;
-    font-size: 30px;
+    font-size: 2.3vw;
     color: #8C8C8C;
 }
 
@@ -637,7 +661,7 @@ footer {
 .block_name p {
     font-family: GeometriaExtraBold, serif;
     color: #181818;
-    font-size: 84px;
+    font-size: 5vw;
     font-weight: 700;
     line-height: 68px;
     margin-bottom: 16px;
@@ -2349,17 +2373,15 @@ footer {
     .team_page_one_text {
         margin-left: 200px;
     }
+
     .fourth_block_left {
         padding: 0;
     }
+
     .fourth_block_right {
         width: 100%;
         padding-left: 12px;
         padding-right: 12px;
-    }
-
-    .page_four {
-        margin: 0;
     }
 }
 
@@ -2386,17 +2408,10 @@ footer {
 }
 
 @media screen and (min-width: 100px) and (max-width: 860px) {
-    .fourth_block__container {
-        flex-direction: column-reverse !important;
-    }
-
     .page_one {
         background-attachment: unset;
     }
 
-    .page_four {
-        margin: 0;
-    }
     .fourth_block_right {
         width: 100%;
         padding-left: 12px;
@@ -2406,6 +2421,7 @@ footer {
     .fourth_block_left {
         padding: 0;
     }
+
     header {
         padding-right: 30px;
         padding-top: 17px;
@@ -2500,13 +2516,8 @@ footer {
         /*display: none;*/
     }
 
-    .page_three__technology-case {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
     .block_name p {
-        font-size: 58px;
+        font-size: 12vw;
     }
 
     .fourth_block_right__title {
