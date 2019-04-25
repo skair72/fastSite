@@ -64,6 +64,23 @@ header {
 
 }
 
+.paper {
+    background-color: rgb(240, 240, 240);
+}
+
+.centered {
+    margin: auto;
+}
+
+.carousel-caption-bg {
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 1vh 20vw 4vw 20vw;
+}
+
 .company_logo_text {
     display: block;
     font-family: Geometria Medium, serif;
@@ -2408,6 +2425,10 @@ footer {
 }
 
 @media screen and (min-width: 100px) and (max-width: 860px) {
+    .slider__indicator:last-child {
+        margin-right: 3vw;
+    }
+
     .navigation_directions h2 {
         font-size: 2.6vw;
     }
