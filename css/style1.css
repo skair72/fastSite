@@ -666,13 +666,6 @@ footer {
     padding-right: 14px;
 }
 
-.block_name {
-    /* display: block; */
-    min-height: 100px;
-    width: 89%;
-
-}
-
 .block_name p {
     font-family: GeometriaExtraBold, serif;
     color: #181818;
