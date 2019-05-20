@@ -117,7 +117,7 @@ header {
 .scroll_marker {
     position: fixed;
     cursor: pointer;
-    bottom: 71px;
+    bottom: 120px;
     font-family: Geometria, serif;
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
@@ -343,8 +343,6 @@ footer {
 }
 
 .second_block {
-    margin-left: 54px;
-    margin-right: 54px;
     display: none;
 }
 
@@ -2571,8 +2569,7 @@ footer {
     }
 
     .right_col,
-    .left_col,
-    footer {
+    .left_col {
         display: none;
     }
 
