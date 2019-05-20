@@ -221,8 +221,6 @@ header {
 }
 
 .parallax-scroll-one {
-    margin-left: 54px;
-    margin-right: 54px;
     background-image: url("../img/2ph.png");
     min-height: 254px;
     background-attachment: fixed;
@@ -230,8 +228,6 @@ header {
 }
 
 .parallax-scroll-two {
-    margin-left: 54px;
-    margin-right: 54px;
     background-image: url("../img/3ph.png");
     min-height: 234px;
     background-attachment: fixed;
@@ -504,6 +500,7 @@ footer {
 
 .slider_directions {
     position: relative;
+    margin: 0px 54px;
 }
 
 .slider_directions.mobile {
@@ -3959,4 +3956,23 @@ footer {
         color: #54ce5f;
         cursor: pointer;
     }
+}
+
+/* add hashkeeperok */
+.num a {
+    padding: 0 15px;
+    color: #0e497d;
+}
+.num a:hover{
+    color:#056cc7;
+    text-decoration:none;
+}
+
+.contacts_bottom{
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.contacts_bottom .address, .contacts_bottom .num{
+    font-size: 1.8rem;
 }
