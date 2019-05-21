@@ -65,17 +65,18 @@
         </li>
 
     </ul>
-    <!--<div class="contacts">
+    <div class="contacts">
         <div class="contacts_title">
             Контакты:
         </div>
         <div class="contacts_info">
-            <div class="address">Тюмень / Ул. Советская , д.51к1<br>
+            <div class="address">Тюмень / Ул. Советская, д.51к1<br>
                 БЦ Ермак, 9 этаж
             </div>
-            <div class="num">8(922)267-87-24&nbsp;&nbsp;&nbsp;&nbsp;8(982)978-15-39</div>
+            <div class="num"><a href="tel:+79222678724">+7 (922)-267-87-24</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:+79829781539">+7 (982)978-15-39</a></div>
+            <div class="email"><a href="mailto:keyfactor72@gmail.com">keyfactor72@gmail.com</a></div>
         </div>
-    </div>-->
+    </div>
 </div>
 
 <!-- FIRSTBLOCK -->
@@ -86,7 +87,7 @@
         </p>
     </div>
     <div class="scroll_text" id="scrolling">
-        <a href="#scrolling"><span></span>< Scroll</a>
+        <a>< Scroll</a>
     </div>
 </div>
 <div class="parallax-scroll-one"></div>
@@ -127,7 +128,7 @@
                 <a id="4" onclick="tabsOpen(event, 'tab-4')" style="text-decoration: none">
                     <div class="navigation_directions__item">
                         <p>04</p>
-                        <h2>Бизнес</h2>
+                        <h2>Мобильная разработка</h2>
                     </div>
                 </a>
             </div>
@@ -138,9 +139,7 @@
                 <div class="slider__items">
                     <div class="slider__item item1">
                         <div class="slider_item_left">
-                            <div class="slider">
-                                <img class="slider__item_photo" src="./img/himia.png" alt="Первый слайд">
-                            </div>
+                            <img class="slider__item_photo" src="./img/himia.png" alt="Первый слайд">
                         </div>
 
                         <div class="slider_item_right">
@@ -665,107 +664,42 @@
     </div>
 </div>
 
-<footer>
-    <div class="cont_b">
-        <div class="icon_list_item">
-            <img class="list-img-icon" src="https://impulse-design.com.ua/images/design/f_ic1.png">
-            <div class="desc">
-                Тюмень / Ул. Советская, д.51к1<br>БЦ Ермак, 9 этаж
-            </div>
-        </div>
-    </div>
-    <div class="cont_b">
-        <div class="icon_list_item">
-            <img class="list-img-icon" src="https://impulse-design.com.ua/images/design/f_ic2.png">
-            <div class="desc">
-                <a href="tel:+79222678724">+7-922-267-87-24</a><br><a href="tel:+79829781539">+7-982-978-15-39</a>
-            </div>
-        </div>
-    </div>
-    <div class="cont_b">
-        <div class="icon_list_item">
-            <img class="list-img-icon" src="https://impulse-design.com.ua/images/design/f_ic3.png" >
-            <div class="desc email">
-                <a href="maito:sale@impulse-design.com.ua">keyfactor72@gmail.com</a>
-            </div>
-        </div>
-    </div>
-</footer>
-
 <style>
 
+    .contacts_title {
+        line-height: 0px;
+    }
+    .address, .num, .email {
+        margin-top: 20px;
+    }
+    .email a{
+        font-weight: bold;
+        color: #007bff;
+    }
+    .main_menu {
+        bottom:0px;
+    }
+    .num a {
+        padding: 0px;
+        color: #007bff;
+    }
+    .contacts a:hover {
+        color: #056cc7;
+        text-decoration: none;
+    }
 
     @media screen and (min-width: 100px) and (max-width: 860px) {
-        
-        .cont_b {
-            text-align: center;
+        .contacts {
+            bottom: 20px;
         }
-        .cont_b .icon_list_icon{
-           float:left;
-        }
-        .cont_b img {
-            float:left;
-            margin: 0 10px;
-            width:30px;
-            margin-top: 5px;
-        }
-        .desc{
-            border: #e4e4e4 solid;
-            border-width: 1px 0 0 0;
-            margin-bottom: 5px;
-            font-size: 13px;
-        }
-        .desc.email {
-            line-height: 30px;
-        }
-        .page_four {
-            margin-bottom: 74px;
-        }   
-
-        footer {
-            position: fixed;
-            background: #fff;
-            height: 135px;
-            padding-left: 54px;
-            padding-right: 54px;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            z-index: 50;
-            padding:10px 0 0;
+        .slider_directions{
+            margin: 0px;
         }
     }
 
    @media screen and (min-width: 860px){
-        .cont_b {
-            float:left;
-            width:33%;
-            text-align: center;
-        }
-        .cont_b .icon_list_icon{
-           float:left;
-        }
-        .cont_b img {
-            float:left;
-            margin: 0 10px;
-            width:50px;
-        }
-        .desc.email {
-            line-height: 50px;
-        }
-        .page_four {
-            margin-bottom: 74px;
-        }   
-
-        footer {
-            position: fixed;
-            background: #fff;
-            height: 74px;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            z-index: 50;
-            padding:10px 54px 0;
+        .contacts {
+            bottom: 60px;
         }
     }
 
@@ -928,14 +862,14 @@ $(document).ready(function () {
     scroll_arr = [];
 
     $('div[id^="page_"]').each(function(value, index) {
-        scroll_arr[$(this).attr('id')] = $(this).offset().top - 70;
+        scroll_arr[$(this).attr('id')] = $(this).offset().top - 55;
     });
 
-    $(".main_menu").on("click","a", function (event) {
+    $(".main_menu_list").on("click","a", function (event) {
         event.preventDefault();
         $('.close_menu').click();
         var id  = $(this).attr('href'),
-        top = $(id).offset().top - 70;
+        top = $(id).offset().top - 55;
         $('body,html').animate({scrollTop: top}, 800);
     });
 
@@ -955,7 +889,7 @@ $(document).ready(function () {
         $('.main_menu').hide('fast');
     });
 
-    $('.scroll_marker').on('click', function (e) { scroll_next() })
+    $('.scroll_marker, #scrolling').on('click', function (e) { scroll_next() })
 
   });
 
