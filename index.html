@@ -88,7 +88,7 @@
             <div class="address">Тюмень / Ул. Советская, д.51к1<br>
                 БЦ Ермак, 9 этаж
             </div>
-            <div class="num"><a href="tel:+79222678724">+7 (922)-267-87-24</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:+79829781539">+7 (982)978-15-39</a></div>
+            <div class="num"><a href="tel:+79222678724">+7 (922) 267 87 24</a><br><a href="tel:+79829781539">+7 (982) 978 15 39</a></div>
             <div class="email"><a href="mailto:office@kfactor.ru">office@kfactor.ru</a></div>
         </div>
     </div>
@@ -108,9 +108,9 @@
 <div class="parallax-scroll-one"></div>
 <!-- SECONDBLOCK -->
 <div id="page_two" class="page_two">
-    <div class="container block_name first_block_name">
-        <p class="">НАПРАВ-</p>
-        <p class="">ЛЕНИЯ</p>
+    <div class="block_name first_block_name">
+        <p class="">НАПРАВЛЕНИЯ</p>
+        <!--<p class="">ЛЕНИЯ</p>-->
     </div>
     <div class="slider_directions">
         <div class="parallax-scroll-two"></div>
@@ -542,10 +542,9 @@
 <!--</div>-->
 
 <!-- THIRDBLOCK -->
-<div id="page_three" class="container">
+<div id="page_three" >
     <div class="block_name">
-        <p class="">ТЕХНО-</p>
-        <p class="">ЛОГИИ</p>
+        <p class="">ТЕХНОЛОГИИ</p>
     </div>
     <div  class="page_three">
         <div class="page_three__technology-case">
@@ -616,10 +615,9 @@
     </div>
 </div>
 <!-- FOURTHBLOCK -->
-<div id="page_four" class="page_four container">
+<div id="page_four" class="page_four">
     <div class="block_name">
-        <p class="">НАШИ</p>
-        <p class="">ПАРТНЕРЫ</p>
+        <p class="">НАШИ ПАРТНЕРЫ</p>
     </div>
     <div class="row logos">
         <div class="col-lg-2 col-md-3 col-sm-4 col-4 logo_container">
@@ -686,31 +684,47 @@
     .contacts_title {
         line-height: 0px;
     }
-    .address, .num, .email {
-        margin-top: 20px;
+    .email {
+        margin-top: 5px;        
+    }
+    .address, .num {
+        margin-top: 15px;
+    }
+    }
+    .scroll_marker{
+        bottom: 80px;
     }
     .email a{
         font-weight: bold;
-        color: #007bff;
+        color: #48e181;
+        font-size: 18px;
     }
     .main_menu {
         bottom:0px;
     }
     .num a {
         padding: 0px;
-        color: #007bff;
+        color: #48e181;
+        font-size: 17px;
     }
     .contacts a:hover {
-        color: #056cc7;
+        color: #399c5e;
         text-decoration: none;
     }
 
     @media screen and (min-width: 100px) and (max-width: 860px) {
         .contacts {
-            bottom: 20px;
+            bottom: 15px;
         }
         .slider_directions{
             margin: 0px;
+        }
+        .page_three{
+            margin:0px !important;
+        }
+        .block_name{
+            padding: 24px 0px !important;
+            margin: 0px !important;
         }
     }
 
@@ -718,12 +732,41 @@
         .contacts {
             bottom: 60px;
         }
+        .logos{
+            margin: 0px 54px;
+            padding: 0 calc(6.33% - 20px);
+        }
     }
     @media screen and (max-width: 1299px) and (min-width: 860px){
         .contacts {
             margin-top: 100px;
         }
     }
+    .page_three{
+        margin: 0px 54px;
+        background-color: #f8f8f8;
+        padding: 0 3%;
+    }
+    
+    .page_two .block_name{
+        background-color: #f0eff0;
+    }
+    #page_three .block_name{
+        background-color:#f8f8f8;
+    }
+
+    .block_name{
+        padding: 54px 0px;
+        margin: 0px 54px;
+    }
+    .block_name p{
+        margin: auto;
+        padding: 0 6.33%;
+    }
+    .slider__container{
+        background-color: #f0eff0;
+    }
+
 </style>
 
 
@@ -878,14 +921,14 @@ function scroll_next(){
 $(document).ready(function () {
 
     scroll_arr = [];
-
+    header_height = 53;
     $('div[id^="page_"]').each(function(value, index) {
-        scroll_arr[$(this).attr('id')] = $(this).offset().top - 55;
+        scroll_arr[$(this).attr('id')] = $(this).offset().top - header_height;
     });
 
     window.addEventListener("resize", function() {
         $('div[id^="page_"]').each(function(value, index) {
-            scroll_arr[$(this).attr('id')] = $(this).offset().top - 55;
+            scroll_arr[$(this).attr('id')] = $(this).offset().top - header_height;
         });
     }, false);
 
@@ -893,7 +936,7 @@ $(document).ready(function () {
         event.preventDefault();
         $('.close_menu').click();
         var id  = $(this).attr('href'),
-        top = $(id).offset().top - 55;
+        top = $(id).offset().top - header_height;
         $('body,html').animate({scrollTop: top}, 800);
     });
 
