@@ -680,7 +680,6 @@
 </div>
 
 <style>
-
     .scroll_text {
         cursor:pointer;
     }
@@ -725,17 +724,12 @@
             margin-top: 100px;
         }
     }
-
-
 </style>
 
 
 <script src="js/jquery.min.js"></script>
 <script src="js/parallax.min.js"></script>
 <script type="text/javascript">
-
-
-
 
   var tabSlides = {};
 
@@ -888,6 +882,12 @@ $(document).ready(function () {
     $('div[id^="page_"]').each(function(value, index) {
         scroll_arr[$(this).attr('id')] = $(this).offset().top - 55;
     });
+
+    window.addEventListener("resize", function() {
+        $('div[id^="page_"]').each(function(value, index) {
+            scroll_arr[$(this).attr('id')] = $(this).offset().top - 55;
+        });
+    }, false);
 
     $(".main_menu_list").on("click","a", function (event) {
         event.preventDefault();
