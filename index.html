@@ -908,17 +908,58 @@
     }
   }
 
-function scrollNext(obj){
+  function scrollNext(obj){
     var winScroll = document.body.scrollTop || document.documentElement.scrollTop + 1;
     for(var item in scrollArray) {
-        if(winScroll < scrollArray[item]){
-            $('body,html').animate({scrollTop: scrollArray[item]}, 500, function(){
+        if(winScroll < scrollArray[item]) {
+            $('body,html').animate({scrollTop: scrollArray[item]}, 500);
+            setTimeout(function() {
                 obj.data().active = true;
-            });
+                enableScroll();
+            }, 500);
             return 0;
         }
     }
-}
+  }
+
+  var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+  var isChrome = !!window.chrome;
+
+  function preventDefault(e) {
+      e = e || window.event;
+      if (e.preventDefault)
+          e.preventDefault();
+      e.returnValue = false;
+  }
+
+  function preventDefaultForScrollKeys(e) {
+        if (keys[e.keyCode]) {
+            preventDefault(e);
+            return false;
+        }
+  }
+
+  function disableScroll() {
+      if (window.addEventListener) // older FF
+          window.addEventListener('DOMMouseScroll', preventDefault, false);
+      if(isChrome){document.addEventListener('wheel', preventDefault, {passive: false});} else {
+          window.onwheel = preventDefault;
+          window.onmousewheel = document.onmousewheel = preventDefault;
+          window.ontouchmove  = preventDefault;
+          document.onkeydown  = preventDefaultForScrollKeys;
+      }
+  }
+
+  function enableScroll() {
+        if (window.removeEventListener)
+            window.removeEventListener('DOMMouseScroll', preventDefault, false);
+        if(isChrome){document.removeEventListener('wheel', preventDefault, {passive: false});} else {
+            window.onmousewheel = document.onmousewheel = null;
+            window.onwheel = null;
+            window.ontouchmove = null;
+            document.onkeydown = null;
+        }
+  }
 
 $(document).ready(function () {
 
@@ -962,10 +1003,10 @@ $(document).ready(function () {
         _this = $(this);
         if(_this.data().active) {
             _this.data().active = false;
+            disableScroll();
             scrollNext(_this);
         }
-    })
-
+    });
   });
 
 </script>
