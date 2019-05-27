@@ -47,7 +47,7 @@
 </header>
 
 <div class="left_col">
-     <div class="scroll_marker">
+     <div class="scroll_marker" data-active="true">
         &lt Scroll
     </div>
 </div>
@@ -101,7 +101,7 @@
         <p>Клиенты могут не помнить, что вы сказали, но они никогда не забудут, что вы заставили их почувствовать.
         </p>
     </div>
-    <div class="scroll_text" id="scrolling">
+    <div class="scroll_text" id="scrolling" data-active="true">
         <a>< Scroll</a>
     </div>
 </div>
@@ -908,11 +908,13 @@
     }
   }
 
-function scrollNext(){
+function scrollNext(obj){
     var winScroll = document.body.scrollTop || document.documentElement.scrollTop + 1;
     for(var item in scrollArray) {
         if(winScroll < scrollArray[item]){
-            $('body,html').animate({scrollTop: scrollArray[item]}, 500);
+            $('body,html').animate({scrollTop: scrollArray[item]}, 500, function(){
+                obj.data().active = true;
+            });
             return 0;
         }
     }
@@ -956,7 +958,13 @@ $(document).ready(function () {
         $('.main_menu').hide('fast');
     });
 
-    $('.scroll_marker, #scrolling').on('click', function (e) { scrollNext() })
+    $('.scroll_marker, #scrolling').on('click', function (e) {
+        _this = $(this);
+        if(_this.data().active) {
+            _this.data().active = false;
+            scrollNext(_this);
+        }
+    })
 
   });
 
