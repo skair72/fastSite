@@ -909,14 +909,15 @@
   }
 
   function scrollNext(obj){
-    var winScroll = document.body.scrollTop || document.documentElement.scrollTop + 1;
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    winScroll++;
+    setTimeout(function() {
+        obj.data().active = true;
+        enableScroll();
+    }, 500);
     for(var item in scrollArray) {
         if(winScroll < scrollArray[item]) {
             $('body,html').animate({scrollTop: scrollArray[item]}, 500);
-            setTimeout(function() {
-                obj.data().active = true;
-                enableScroll();
-            }, 500);
             return 0;
         }
     }
